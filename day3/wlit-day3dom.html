@@ -21,18 +21,23 @@
             // document.body.appendChild(output)
             // document.body.appendChild(displayCollege)
             document.body.appendChild(display)
-            // document.body.appendChild(`${output} college name is ${displayCollege}`)
         }
     </script>
 </head>
 <body>
     <input type="text" id="name" placeholder="Enter your name"/>
     <input type="text" id="college-name" placeholder="Enter college name"/>
-    <button id="submit"  onclick="showInfo()">Save info</button>
+    <button id="submit"  onclick="showInfo()" onmouseover="showAlert()">Save info</button>
     <script> 
         const heading = document.createElement('h2')
         heading.innerHTML= "WLIT day 3"
         document.body.appendChild(heading)
+
+        const showAlert = function(){
+            alert('Click me')
+            showInfo() 
+            // document.querySelector('#submit').click()
+        }
 
     </script>
 </body>
