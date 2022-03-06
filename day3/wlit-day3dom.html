@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WLIT day 3 - DOM</title>
+    <script>
+        const showInfo = function () {
+            const name = document.getElementById('name').value
+            const collegeName = document.getElementById('college-name').value
+
+            // const output = document.createElement('h1')
+            // const displayCollege =document.getElementById('h1')
+            const display =document.createElement('h1')
+
+            // output.innerHTML = name;
+            // output.innerHTML = collegeName;
+            display.innerHTML = `${name}'s college name is ${collegeName}`;
+
+            // document.body.appendChild(output)
+            // document.body.appendChild(displayCollege)
+            document.body.appendChild(display)
+            // document.body.appendChild(`${output} college name is ${displayCollege}`)
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="name" placeholder="Enter your name"/>
+    <input type="text" id="college-name" placeholder="Enter college name"/>
+    <button id="submit"  onclick="showInfo()">Save info</button>
+    <script> 
+        const heading = document.createElement('h2')
+        heading.innerHTML= "WLIT day 3"
+        document.body.appendChild(heading)
+
+    </script>
+</body>
+
+</html>
