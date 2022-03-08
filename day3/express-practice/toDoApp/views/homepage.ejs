@@ -9,17 +9,21 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
+  <a href="/add-todo" class="btn btn-success my-2">Add a To-Do</a>
     <!-- <p>Hi my new friends</p> -->
     <div class="card">
         <div class="card-header">
-          Featured
+         <h3>To do app title</h3>
         </div>
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">1.tomato 2.potato 3.slipper</p>
-          <a href="#" class="btn btn-primary">Update</a>
-          <a href="#" class="btn btn-danger">Delete</a>
-        </div>
+        <% todoList.forEach((todo, index) => { %>
+          <div class="card-body">
+            <h5 class="card-title"><%= todo.name %></h5>
+            <p class="card-text"><%= todo.description %></p>
+            <a href="/edit-todo/<%= todo.id %>" class="btn btn-primary">Update</a>
+            <a href="/delete-todo/<%= todo.id %>" class="btn btn-danger">Delete</a>
+          </div>
+        <% }) %>
       </div>
+
 </body>
 </html>
